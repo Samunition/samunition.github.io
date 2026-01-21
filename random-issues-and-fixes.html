@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Random Issues and Fixes</title>
+    </head>
+    <body>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="random-issues-and-fixes.html">Random Issues and Fixes</a>
+        </nav>
+        <h1>Random Issues and Fixes</h1>
+        <p>A page of random issues i have hit and their fixes</p>
+        <hr>
+        <p>
+            KWin task bar and task switcher previews broke. journalctl showed:
+            <blockquote>
+                kpipewire_logging: need a window and a context ToolTipDialog(0x55b6d7e76960 exposed, visibility=QWindow::Windowed, flags=QFlags<Qt::WindowType>(FramelessWindowHint|WindowStaysOnTopHint|WindowDoesNotAcceptFocus), transientParent=0x55b6d45aeb30, geometry=0,1468 296x195) 
+            </blockquote>
+            The fix was to set SceneGraphBackend=auto in ~/.config/kdeglobals and restart
+        </p>
+        <hr>
+    </body>
+</html>
